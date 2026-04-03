@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>PEMILIHAN UMUM CAKRAPRANA 2026</title>
+</head>
+
+<body>
+    <!-- Halaman Login -->
+    <div id="loginPage" class="container">
+        <h1 class="title">PEMILIHAN UMUM<br>CAKRAPRANA 2026</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Masuk</button>
+        </form>
+    </div>
+
+    <!-- Halaman Voting -->
+    <div id="votingPage" class="container voting-container" style="display: none;">
+        <h1 class="title">Pilih Kandidat<br>CAKRAPRANA 2026</h1>
+
+        <div class="candidates-grid">
+            <div class="candidate-card">
+                <div class="candidate-photo">👤</div>
+                <button class="candidate-btn" data-candidate="1">Kandidat 1</button>
+            </div>
+            <div class="candidate-card">
+                <div class="candidate-photo">👤</div>
+                <button class="candidate-btn" data-candidate="2">Kandidat 2</button>
+            </div>
+            <div class="candidate-card">
+                <div class="candidate-photo">👤</div>
+                <button class="candidate-btn" data-candidate="3">Kandidat 3</button>
+            </div>
+        </div>
+
+        <div id="votedMessage" class="voted-message">
+            ✅ Terima kasih! Anda sudah memilih Kandidat X. Suara Anda sangat berharga!
+        </div>
+
+        <button id="logoutBtn" class="btn btn-logout">Logout</button>
+    </div>
+
+    <!-- Modal Konfirmasi Voting -->
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal">
+            <h3>⚠️ Konfirmasi Pemilihan</h3>
+            <div class="modal-question" id="modalQuestion">
+                Apakah anda yakin memilih kandidat ini?
+            </div>
+            <div class="modal-buttons">
+                <button id="confirmVote" class="btn-confirm">✅ Ya, saya yakin</button>
+                <button id="cancelVote" class="btn-cancel">❌ Tidak, kembali</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
